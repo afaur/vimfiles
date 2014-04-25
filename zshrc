@@ -113,3 +113,14 @@ alias .alias.regex="java -jar ~/frak-cli/compiled/frak-cli-0.1.0-standalone.jar"
 alias zues="zeus"
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+# Tail Remote
+.tail-remote() {
+  group=${1}
+  file=${2}
+  command dsh -Mcg $group -- "tail -f $file"
+}
+
+# VITALS
+.tail-myvitals-prod() { .tail-remote "myvitals-prod" "/var/www/apps/myvitals/current/log/production.log" }
+.tail-vitals-prod() { .tail-remote "vitals-prod" "/var/www/apps/honeybadger/shared/log/access.log /var/www/apps/honeybadger/shared/log/error.log" }
