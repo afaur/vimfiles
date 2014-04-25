@@ -43,3 +43,6 @@
 [submodule "bundle/dash.vim"]
 	path = bundle/dash.vim
 	url = https://github.com/rizzatti/dash.vim.git
+[submodule "bundle/vim-markdown"]
+	path = bundle/vim-markdown
+	url = git@github.com:plasticboy/vim-markdown.git
