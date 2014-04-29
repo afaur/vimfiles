@@ -23,6 +23,8 @@ source ~/.rvm/scripts/rvm
 
 # Customize to your needs...
 export PATH=/usr/local/bin:$PATH
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=$PATH:$HOME/bin # generic bin
 
 # Options
 setopt interactivecomments
@@ -31,11 +33,11 @@ unsetopt correct_all
 
 # Directories
 alias .pj=" cd ~/VProjects/"
-alias .mv=" cd ~/sites/devup/apps/myvitals"
 alias .li3=" cd ~/sites/devup/apps/lithium"
 alias .dv=" cd ~/sites/devup/"
 alias .vt=" cd ~/sites/devup/apps/legacy/vitals/"
 alias .hb=" cd ~/sites/devup/apps/vitals/"
+alias .mv=" cd ~/sites/devup/apps/myvitals"
 alias .my=" cd ~/sites/devup/apps/myvitals"
 
 # Clear the cache
@@ -111,8 +113,6 @@ alias .alias.regex="java -jar ~/frak-cli/compiled/frak-cli-0.1.0-standalone.jar"
 
 # Common Typos
 alias zues="zeus"
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # Tail Remote
 .tail-remote() {

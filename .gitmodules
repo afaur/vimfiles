@@ -46,3 +46,6 @@
 [submodule "bundle/vim-markdown"]
 	path = bundle/vim-markdown
 	url = git@github.com:plasticboy/vim-markdown.git
+[submodule "bundle/CoVim"]
+	path = bundle/CoVim
+	url = git://github.com/FredKSchott/CoVim.git
