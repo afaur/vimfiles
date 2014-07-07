@@ -76,20 +76,28 @@ alias grh='git reset HEAD'
 alias grhh='git reset --hard'
 alias gfo='git fetch origin'
 alias gcp='git cherry-pick'
-alias gp="git pull --rebase && git push origin"
-alias gpo="git push origin"
 alias gpfo="git push -f origin"
 alias gtl="git tag -n | ruby -e \"puts STDIN.read.lines.sort_by { |t| t.split.first.sub(/^v/, '').sub(/\-rc/, '.1').split('.').map(&:to_i).tap { |v| v << 99 if v.length < 5 } }\""
 alias gam="git commit --amend -v --date=\`date +%Y-%m-%dT%H:%M:%S\`"
-# Clean current branch with origin
-function gclean() {
+function gclean() { # Cleans the repo and pulls the latest changes from origin
 	git clean -fd
 	git fetch origin
 	git reset --hard origin/`git rev-parse --abbrev-ref HEAD`
 }
+function gpo() {
+	_hasUpStream && git pull --rebase # If there is an upstream it rebases
+	git push origin                   # Pushes to origin
+	_setStream                        # Sets upstream
+}
+function _setStream() { # Sets the upstream to the correctly named branch
+	git branch --set-upstream-to=origin/`git rev-parse --abbrev-ref HEAD` `git rev-parse --abbrev-ref HEAD`
+}
+function _hasUpStream() { # Determines if an upstream is set
+	git branch -vv | grep \* | grep origin
+}
 
 # Mongo
-alias .mongo.start='mongod --fork'
+alias .mongo.start='mongod --config /usr/local/etc/mongod.conf'
 alias .mongo.stop='mongo admin --eval "db.shutdownServer()"'
 
 # Postgres
@@ -120,6 +128,8 @@ alias zues="zeus"
   file=${2}
   command dsh -Mcg $group -- "tail -f $file"
 }
+
+alias vup="vagrant reload && vagrant ssh -c 'sudo service httpd start'"
 
 # VITALS
 .tail-myvitals-prod() { .tail-remote "myvitals-prod" "/var/www/apps/myvitals/current/log/production.log" }

@@ -97,6 +97,7 @@ let g:neocomplcache_enable_at_startup = 1
 
 " Auto detect indention
 autocmd BufReadPost * :DetectIndent
+let g:detectindent_preferred_expandtab = 1
 let g:detectindent_preferred_indent = 2
 
 " Theme
@@ -108,3 +109,7 @@ nmap <silent> <leader>d <Plug>DashSearch
 
 " mardown
 let g:vim_markdown_folding_disabled=1
+
+" covim
+let CoVim_default_name = "blainesch"
+let CoVim_default_port = "9180"
