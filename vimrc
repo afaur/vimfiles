@@ -19,7 +19,7 @@ nnoremap Q :normal n.<CR>
 
 " Enable Viewing Whitespace
 set list
-set listchars=tab:>-,trail:~,extends:>,precedes:<
+set listchars=tab:\ \ ,trail:~,extends:>,precedes:<
 
 " Rulers ftw!
 autocmd BufNewFile,BufRead *.rb setlocal colorcolumn=80
@@ -56,6 +56,8 @@ map <ScrollWheelDown> <C-E>
 autocmd BufWritePre * :%s/\s\+$//e
 
 " Pathogen - package manager
+set nocompatible
+set t_Co=16
 execute pathogen#infect()
 
 " NerdTree File Manager
