@@ -1,11 +1,11 @@
 [user]
 	name = Blaine Schmeisser
-	email = BlaineSch@gmail.com
+	email = blainesch@gmail.com
 [color]
 	ui = true
 [core]
 	editor = vim
-	excludesfile = $HOME/.gitignore
+	excludesfile = ~/.gitignore
 [push]
 	default = current
 [alias]
