@@ -1,3 +1,8 @@
+" Pathogen - package manager
+set nocompatible
+set t_Co=16
+execute pathogen#infect()
+
 " Lets
 let mapleader = ","
 syntax enable
@@ -54,11 +59,6 @@ map <ScrollWheelDown> <C-E>
 
 " Trim trailing whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e
-
-" Pathogen - package manager
-set nocompatible
-set t_Co=16
-execute pathogen#infect()
 
 " NerdTree File Manager
 nnoremap <silent> <Leader>p :NERDTreeToggle<CR>
