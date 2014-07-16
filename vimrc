@@ -105,6 +105,7 @@ let g:detectindent_preferred_indent = 2
 " Theme
 colorscheme solarized
 set background=dark
+au BufRead,BufNewFile *.twig set filetype=jinja
 
 " Dash
 nmap <silent> <leader>d <Plug>DashSearch
