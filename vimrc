@@ -13,9 +13,6 @@ set clipboard=unnamed
 filetype plugin indent on
 set backspace=indent,eol,start
 
-" Don't add trailing EOL in PHP files
-autocmd FileType php setlocal noeol binary fileformat=dos
-
 " Press F4 to toggle highlighting on/off, and show current value.
 noremap <F4> :set hlsearch! hlsearch?<CR>
 
