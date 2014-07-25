@@ -111,14 +111,6 @@ alias .mysql.stop='mysql.server stop'
 # Redis
 alias .redis.start='redis-server /usr/local/etc/redis.conf'
 
-# Frak it
-function .regex() {
-	cd ~/frak-cli
-	lein run "$@"
-	cd -
-}
-alias .alias.regex="java -jar ~/frak-cli/compiled/frak-cli-0.1.0-standalone.jar"
-
 # Common Typos
 alias zues="zeus"
 
