@@ -39,6 +39,8 @@ alias .vt=" cd ~/sites/devup/apps/legacy/vitals/"
 alias .hb=" cd ~/sites/devup/apps/vitals/"
 alias .mv=" cd ~/sites/devup/apps/myvitals"
 alias .my=" cd ~/sites/devup/apps/myvitals"
+alias .app=" cd ~/sites/devup/apps"
+alias .apps=" cd ~/sites/devup/apps"
 
 # Clear the cache
 function .hb.cc() {
