@@ -16,9 +16,6 @@
 [submodule "bundle/ZoomWin"]
 	path = bundle/ZoomWin
 	url = git@github.com:vim-scripts/ZoomWin.git
-[submodule "bundle/molokai"]
-	path = bundle/molokai
-	url = git@github.com:tomasr/molokai.git
 [submodule "libraries/vim-pathogen"]
 	path = libraries/vim-pathogen
 	url = git@github.com:tpope/vim-pathogen.git
