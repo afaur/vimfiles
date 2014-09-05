@@ -66,13 +66,13 @@ function .hb.cc() {
 alias .composer.get="curl http://getcomposer.org/installer | php"
 
 # Git aliases
-alias gs='git status'
+alias gs='git status -s'
 alias gco='git checkout'
 alias ga='git add -A'
 alias gd='git diff'
 alias gap='git add . -N && git add --patch'
 alias gc="git commit -v"
-alias gl='git log --stat'
+alias gl='git log --stat --oneline --decorate --graph'
 alias gpr='git pull --rebase'
 alias grh='git reset HEAD'
 alias grhh='git reset --hard'
