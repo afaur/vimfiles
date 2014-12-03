@@ -25,7 +25,7 @@ set listchars=tab:\ \ ,trail:~,extends:>,precedes:<
 
 " Rulers ftw!
 autocmd BufNewFile,BufRead *.rb setlocal colorcolumn=80
-autocmd BufNewFile,BufRead *.php setlocal colorcolumn=100
+autocmd BufNewFile,BufRead *.php setlocal colorcolumn=90,120
 autocmd BufNewFile,BufRead COMMIT_EDITMSG setlocal colorcolumn=72
 
 " Scroll Off
