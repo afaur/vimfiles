@@ -131,3 +131,6 @@ alias vup="vagrant reload && vagrant ssh -c 'sudo service httpd start'"
 # VITALS
 .tail-myvitals-prod() { .tail-remote "myvitals-prod" "/var/www/apps/myvitals/current/log/production.log" }
 .tail-vitals-prod() { .tail-remote "vitals-prod" "/var/www/apps/honeybadger/shared/log/access.log /var/www/apps/honeybadger/shared/log/error.log" }
+
+# added by travis gem
+[ -f /Users/bschmeisser/.travis/travis.sh ] && source /Users/bschmeisser/.travis/travis.sh
