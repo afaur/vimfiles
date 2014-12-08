@@ -104,9 +104,6 @@ colorscheme solarized
 set background=dark
 au BufRead,BufNewFile *.twig set filetype=jinja
 
-" Dash
-nmap <silent> <leader>d <Plug>DashSearch
-
 " mardown
 let g:vim_markdown_folding_disabled=1
 
