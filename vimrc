@@ -34,9 +34,6 @@ set sidescrolloff=7
 set sidescroll=1
 set scrolljump=10
 
-" Switch panes with Ctrl
-map <Leader>w <C-w>
-
 " Disable arrow keys
 map <Left> <Nop>
 map <Right> <Nop>
@@ -58,8 +55,7 @@ map <ScrollWheelDown> <C-E>
 autocmd BufWritePre * :%s/\s\+$//e
 
 " NerdTree File Manager
-nnoremap <silent> <Leader>p :NERDTreeToggle<CR>
-map <Leader>o :BookmarkToRoot pj<CR>
+map <Leader>w <C-w>
 map <Leader>* :NERDTreeFind<CR>
 
 " Ctrlp
