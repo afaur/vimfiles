@@ -60,7 +60,7 @@ map <Leader>* :NERDTreeFind<CR>
 
 " Ctrlp
 let g:ctrlp_map = '<Leader>t'
-let g:ctrlp_custom_ignore = '\v\~$|\.(o|exe|dll|bak|orig|swp|jpg|png|gif)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|vendor/|tmp/cache|_site|node_modules|^tmp'
+let g:ctrlp_custom_ignore = '\v\~$|\.(o|exe|dll|bak|orig|swp|jpg|png|gif)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|vendor/|app/libraries|libraries|_site|node_modules|^tmp'
 nnoremap <silent> <Leader>y :CtrlPBuffer<CR>
 nnoremap <silent> <Leader>T :CtrlPBufTag<CR>
 nnoremap <silent> <Leader>r :CtrlPMRU<CR>
