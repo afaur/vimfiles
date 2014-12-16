@@ -30,6 +30,7 @@ PATH=$PATH:$HOME/bin # generic bin
 setopt interactivecomments
 unsetopt correct
 unsetopt correct_all
+unsetopt auto_name_dirs
 
 # Directories
 alias .pj=" cd ~/VProjects/"
