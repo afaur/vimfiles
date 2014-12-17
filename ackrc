@@ -1,0 +1,7 @@
+--color
+--ignore-dir=.idea/
+--ignore-dir=tmp/
+--ignore-dir=node_modules/
+--ignore-dir=compiled/
+--ignore-dir=_vendor/
+--ignore-dir=vendor/
