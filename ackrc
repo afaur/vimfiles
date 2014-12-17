@@ -5,3 +5,4 @@
 --ignore-dir=compiled/
 --ignore-dir=_vendor/
 --ignore-dir=vendor/
+-i

@@ -114,9 +114,6 @@ alias .mysql.stop='mysql.server stop'
 # Redis
 alias .redis.start='redis-server /usr/local/etc/redis.conf'
 
-# Ack
-alias ack="ack -i"
-
 # Common Typos
 alias zues="zeus"
 
