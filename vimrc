@@ -107,3 +107,13 @@ let g:vim_markdown_folding_disabled=1
 " covim
 let CoVim_default_name = "blainesch"
 let CoVim_default_port = "9180"
+
+" Seeing is believing
+nmap <buffer> <leader>9 <Plug>(seeing-is-believing-run)
+xmap <buffer> <leader>9 <Plug>(seeing-is-believing-run)
+imap <buffer> <leader>9 <Plug>(seeing-is-believing-run)
+
+nmap <buffer> <leader>8 <Plug>(seeing-is-believing-mark)
+xmap <buffer> <leader>8 <Plug>(seeing-is-believing-mark)
+imap <buffer> <leader>8 <Plug>(seeing-is-believing-mark)
+
