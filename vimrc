@@ -107,3 +107,8 @@ let g:vim_markdown_folding_disabled=1
 " covim
 let CoVim_default_name = "blainesch"
 let CoVim_default_port = "9180"
+
+" Ruby eval inline
+nnoremap <silent> <Leader>hm :execute "normal \<Plug>(seeing-is-believing-mark)"<CR>
+nnoremap <silent> <Leader>hb :execute "normal \<Plug>(seeing-is-believing-run)"<CR>
+
