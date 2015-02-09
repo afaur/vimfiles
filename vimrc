@@ -117,3 +117,10 @@ nmap <buffer> <leader>8 <Plug>(seeing-is-believing-mark)
 xmap <buffer> <leader>8 <Plug>(seeing-is-believing-mark)
 imap <buffer> <leader>8 <Plug>(seeing-is-believing-mark)
 
+" Special split settings
+set splitright
+set splitbelow
+
+" Change background color of highlighted tab to black with white lettering
+hi TabLineSel guifg=#666 guibg=#222 gui=bold ctermfg=231 ctermbg=235 cterm=bold
+
