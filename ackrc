@@ -5,4 +5,8 @@
 --ignore-dir=compiled/
 --ignore-dir=_vendor/
 --ignore-dir=vendor/
+--ignore-dir=fontawesome/
+--ignore-dir=font-awesome/
+--ignore-dir=bootstrap3/
+--ignore-dir=_source/
 -i
