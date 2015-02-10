@@ -49,3 +49,6 @@
 [submodule "bundle/vim-seeing-is-believing"]
 	path = bundle/vim-seeing-is-believing
 	url = git@github.com:hwartig/vim-seeing-is-believing.git
+[submodule "bundle/YouCompleteMe"]
+	path = bundle/YouCompleteMe
+	url = git@github.com:Valloric/YouCompleteMe.git

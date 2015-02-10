@@ -119,3 +119,7 @@ set splitbelow
 " Change background color of highlighted tab to black with white lettering
 hi TabLineSel guifg=#666 guibg=#222 gui=bold ctermfg=231 ctermbg=235 cterm=bold
 
+" Go Omni Completion
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
+setlocal omnifunc=gocomplete#Complete
