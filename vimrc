@@ -107,3 +107,8 @@ let g:vim_markdown_folding_disabled=1
 " covim
 let CoVim_default_name = "blainesch"
 let CoVim_default_port = "9180"
+
+" Go Omni Completion
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
+setlocal omnifunc=gocomplete#Complete
