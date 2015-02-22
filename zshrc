@@ -132,9 +132,4 @@ alias vup="vagrant reload && vagrant ssh -c 'sudo service httpd start'"
 [ -f /Users/bschmeisser/.travis/travis.sh ] && source /Users/bschmeisser/.travis/travis.sh
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-picpaste () {
-    opts=( -F storetime=1 -F addprivacy=1 -F rules=yes )
-    link=http://www.picpaste.com/upload.php
-    curl -sA firefox "${opts[@]}" -F upload=@"$1" "$link" \
-    | sed -n '/Picture URL/{n;s/.*">//;s/<.*//p}'
-}
+export TERM="xterm-256color"
