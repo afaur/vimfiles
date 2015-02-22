@@ -9,5 +9,6 @@ ln -s ~/.vim/libraries/vim-pathogen/autoload/pathogen.vim ~/.vim/autoload/pathog
 ln -s ~/.vim/vimrc ~/.vimrc
 ln -s ~/.vim/zshrc ~/.zshrc
 ln -s ~/.vim/ackrc ~/.ackrc
+ln -s ~/.vim/tmux.conf ~/.tmux.conf
 ln -s ~/.vim/gitconfig ~/.gitconfig
 ~~~
