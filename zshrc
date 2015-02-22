@@ -19,18 +19,15 @@ DISABLE_AUTO_UPDATE="true" # upgrade_oh_my_zsh
 plugins=(bundler)
 
 source $ZSH/oh-my-zsh.sh
-source ~/.rvm/scripts/rvm
 
 # Customize to your needs...
 export PATH=/usr/local/bin:$PATH
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-PATH=$PATH:$HOME/bin # generic bin
+PATH=$HOME/bin:$PATH # generic bin
 
 # Options
 setopt interactivecomments
 unsetopt correct
 unsetopt correct_all
-unsetopt auto_name_dirs
 
 # Directories
 alias .pj=" cd ~/VProjects/"
@@ -40,6 +37,7 @@ alias .vt=" cd ~/sites/devup/apps/legacy/vitals/"
 alias .hb=" cd ~/sites/devup/apps/vitals/"
 alias .mv=" cd ~/sites/devup/apps/myvitals"
 alias .my=" cd ~/sites/devup/apps/myvitals"
+alias .sooner=" cd ~/sites/devup/apps/sooner.io/soonerio_scripts"
 alias .app=" cd ~/sites/devup/apps"
 alias .apps=" cd ~/sites/devup/apps"
 
@@ -60,7 +58,6 @@ function .hb.cc() {
 		cd app/webroot/js/compiled/ && rm -f *.js
 		.hb
 	fi
-	cd -
 }
 
 # Composer
@@ -82,6 +79,7 @@ alias gcp='git cherry-pick'
 alias gpfo="git push -f origin"
 alias gtl="git tag -n | ruby -e \"puts STDIN.read.lines.sort_by { |t| t.split.first.sub(/^v/, '').sub(/\-rc/, '.1').split('.').map(&:to_i).tap { |v| v << 99 if v.length < 5 } }\""
 alias gam="git commit --amend -v --date=\`date +%Y-%m-%dT%H:%M:%S\`"
+alias gdb="git branch --merged | grep -v '\*' | xargs -n 1 git branch -d"
 function gclean() { # Cleans the repo and pulls the latest changes from origin
 	git clean -fd
 	git fetch origin
@@ -104,7 +102,7 @@ alias .mongo.start='mongod --config /usr/local/etc/mongod.conf'
 alias .mongo.stop='mongo admin --eval "db.shutdownServer()"'
 
 # Postgres
-alias .post.start='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
+alias .post.start='pg_ctl -D /usr/local/var/postgres -l logfile start'
 alias .post.stop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
 
 # Mysql
@@ -132,3 +130,11 @@ alias vup="vagrant reload && vagrant ssh -c 'sudo service httpd start'"
 
 # added by travis gem
 [ -f /Users/bschmeisser/.travis/travis.sh ] && source /Users/bschmeisser/.travis/travis.sh
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+picpaste () {
+    opts=( -F storetime=1 -F addprivacy=1 -F rules=yes )
+    link=http://www.picpaste.com/upload.php
+    curl -sA firefox "${opts[@]}" -F upload=@"$1" "$link" \
+    | sed -n '/Picture URL/{n;s/.*">//;s/<.*//p}'
+}
