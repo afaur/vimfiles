@@ -132,4 +132,3 @@ alias vup="vagrant reload && vagrant ssh -c 'sudo service httpd start'"
 [ -f /Users/bschmeisser/.travis/travis.sh ] && source /Users/bschmeisser/.travis/travis.sh
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-export TERM="xterm-256color"
